@@ -28,6 +28,14 @@ img {
     display: block;
     margin: 15px 0;}
 
+/* home image */
+
+.homeimage {
+    width: 100%;
+    height: 500;
+    object-fit: cover;
+}
+
  /*lists */
  ul { list-style-position: inside; }
 
@@ -56,3 +64,4 @@ iframe {
 hr {
     border: 1px solid darkred;
 }
+
