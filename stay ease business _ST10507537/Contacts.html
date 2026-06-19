@@ -1,52 +1,88 @@
-
 <!DOCTYPE html>
+<!-- Contacts page: contact details, location map, and a contact form. -->
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="Style.css">
-<title>Contacts</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Stay Ease about a booking, hosting your place, or any question. We reply within one working day.">
+  <meta name="keywords" content="contact, accommodation, short stay, booking, support, Stay Ease">
+  <meta name="author" content="ST10507537">
+  <title>Contacts | Stay Ease</title>
+  <link rel="stylesheet" href="Style.css">
 </head>
 <body>
 <header>
- 
-<h1> Contact StayEase</h1>
-
-<nav>
-    <a href="Home.html">Home/</a>
+  <h1>Contact StayEase</h1>
+  <nav>
+    <a href="index.html">Home/</a>
     <a href="about us.html">About Us /</a>
     <a href="Gallery.html">Gallery/</a>
     <a href="Products.html">Products/</a>
+    <a href="enquiry.html">Enquiry/</a>
     <a href="Contacts.html">Contacts/</a>
-</nav>
-
-<hr>
-
-<p> Email: stayease@gmail.com</p>
-
-<p> whatsapp: 078 465 1237 </p>
-
-<h3> Our location</h3>
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.1262403619326!2d28.031313574026683!3d-26.192571377083713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950b9300000001%3A0x335d35f228da3ccd!2sRosebank%20College%20%7C%20Braamfontein%20Campus!5e0!3m2!1sen!2sza!4v1776279025123!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-
-
-
- <img src="images/logo.jpeg" width="40">
-
-
-
-<p>property24.2026 apartment exterior 
-photograph . available at
-https://property24.com (13 April 2026)</p>
-
- <P>bookings.com. 2026 apartment interior photograph. available at 
-http://Bookings.com</P
- 
+  </nav>
+  <hr>
 </header>
 
+<main>
+  <p>Email: stayease@gmail.com</p>
+  <p>WhatsApp: 078 465 1237</p>
+
+  <h3>Our location</h3>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.1262403619326!2d28.031313574026683!3d-26.192571377083713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950b9300000001%3A0x335d35f228da3ccd!2sRosebank%20College%20%7C%20Braamfontein%20Campus!5e0!3m2!1sen!2sza!4v1776279025123!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Stay Ease location map"></iframe>
+
+  <img src="images/logo.jpeg" width="40" alt="Stay Ease logo">
+
+  <p>property24. 2026. Apartment exterior photograph. Available at: https://property24.com (Accessed 13 April 2026).</p>
+  <p>Booking.com. 2026. Apartment interior photograph. Available at: http://Booking.com</p>
+
+  <!-- Contact form -->
+  <section class="form-wrap">
+    <h2>Send us a message</h2>
+    <p>Fields marked <span class="required">*</span> are required.</p>
+
+    <form id="contactForm" novalidate>
+      <div class="field">
+        <label for="name">Full name <span class="required">*</span></label>
+        <input type="text" id="name">
+        <span class="error-msg" id="nameError"></span>
+      </div>
+
+      <div class="field">
+        <label for="email">Email address <span class="required">*</span></label>
+        <input type="email" id="email">
+        <span class="error-msg" id="emailError"></span>
+      </div>
+
+      <div class="field">
+        <label for="subject">What's your message about? <span class="required">*</span></label>
+        <select id="subject">
+          <option value="">-- Please choose --</option>
+          <option value="General enquiry">General enquiry</option>
+          <option value="Booking support">Booking support</option>
+          <option value="Host support">Host support</option>
+          <option value="Feedback">Feedback</option>
+        </select>
+        <span class="error-msg" id="subjectError"></span>
+      </div>
+
+      <div class="field">
+        <label for="message">Your message <span class="required">*</span></label>
+        <textarea id="message"></textarea>
+        <span class="error-msg" id="messageError"></span>
+      </div>
+
+      <button type="submit" class="btn">Send message</button>
+    </form>
+
+    <div class="success-banner" id="successBanner" role="status" aria-live="polite"></div>
+  </section>
+</main>
+
 <footer>
-&copy;ST10507537
+  &copy;ST10507537
 </footer>
+
+<script src="JSS StayEase.js"></script>
 </body>
 </html>

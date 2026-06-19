@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- Enquiry page: enquiry form with validation and a tailored reply. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enquire about a short-term stay with Stay Ease. Check availability and nightly rates, or list your place as a host.">
+  <meta name="keywords" content="accommodation, short stay, rentals, holiday, booking, Stay Ease">
+  <meta name="author" content="ST10507537">
+  <title>Enquire | Stay Ease</title>
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+<header>
+  <h1>Enquire about your stay</h1>
+  <nav>
+    <a href="Home.html">Home/</a>
+    <a href="about us.html">About Us /</a>
+    <a href="Gallery.html">Gallery/</a>
+    <a href="Products.html">Products/</a>
+    <a href="Contacts.html">Enquiry/</a>
+    <a href="enquiry.html">Contacts/</a>
+  </nav>
+  <hr>
+</header>
+
+<main class="form-wrap">
+  <p>Send us an enquiry and we'll reply with availability and rates. Fields marked <span class="required">*</span> are required.</p>
+
+  <form id="enquiryForm" novalidate>
+    <div class="field">
+      <label for="name">Full name <span class="required">*</span></label>
+      <input type="text" id="name">
+      <span class="error-msg" id="nameError"></span>
+    </div>
+
+    <div class="field">
+      <label for="email">Email address <span class="required">*</span></label>
+      <input type="email" id="email">
+      <span class="error-msg" id="emailError"></span>
+    </div>
+
+    <div class="field">
+      <label for="phone">Phone number <span class="required">*</span></label>
+      <input type="tel" id="phone" placeholder="e.g. 082 123 4567">
+      <span class="error-msg" id="phoneError"></span>
+    </div>
+
+    <div class="field">
+      <label for="enquiryType">What is your enquiry about? <span class="required">*</span></label>
+      <select id="enquiryType">
+        <option value="">-- Please choose --</option>
+        <option value="stay">Booking a stay</option>
+        <option value="availability">Checking availability</option>
+        <option value="host">Becoming a host</option>
+      </select>
+      <span class="error-msg" id="typeError"></span>
+    </div>
+
+    <div class="field">
+      <label for="message">Your message <span class="required">*</span></label>
+      <textarea id="message"></textarea>
+      <span class="error-msg" id="messageError"></span>
+    </div>
+
+    <button type="submit" class="btn">Send enquiry</button>
+  </form>
+
+  <div class="success-banner" id="successBanner" role="status" aria-live="polite"></div>
+</main>
+
+<footer>
+  &copy;ST10507537
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
